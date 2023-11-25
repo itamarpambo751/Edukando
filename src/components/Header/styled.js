@@ -5,6 +5,9 @@ export const StyledHeader = styled.header`
     height: 110px;
     background: #fff;
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
     align-items: center;
     div.container {
         padding-top: .5rem;
@@ -64,7 +67,7 @@ export const StyledHeader = styled.header`
         }
     }
     @media (max-width: 1105px) {
-        background: transparent;
+        background: var(--bodyBg);
         div.container {
             .header-right-side {
                 nav {
