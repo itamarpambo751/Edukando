@@ -10,6 +10,7 @@
   --headingColor: #222222;
   --contentColor: #5F6C76;
   --contentColor2: #5C727D;
+  --facebookColor: #5d5dff;
   --primaryColor: #5F2DED;
   --secondaryColor: #F2277E;
   --secondaryColor2: #FF275A;
@@ -74,13 +75,13 @@ body {
   0% {
     right: 0;
   } 100% {
-    right: -340px;
+    right: -390px;
   }
 }
 
 @keyframes anime-right {
   0% {
-    right: -340px;
+    right: -390px;
   } 100% {
     right: 0;
   }

@@ -85,13 +85,13 @@ export const StyledHeader = styled.header`
 `
 
 export const StyledDrawer = styled.div`
-    width: 300px;
+    width: 290px;
     background: #FFF;
     position: absolute;
     top: 0;
     right: 0;
     height: 100vh;
-    padding: 20px;
+    padding: 25px;
     box-shadow: 0px 50px 50px 50px rgba(0, 0, 0, .05);
     .btn-close {
         position: absolute;
@@ -99,14 +99,78 @@ export const StyledDrawer = styled.div`
         width: 40px;
         height: 40px;
         top: 0;
-        background-color: #222;
+        background-color: var(--darkblack);
         color: white;
-        font-size: 1.2rem;
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
+        i svg {
+            scale: 1.6;
+        } 
     }
-    
-    
+    .context-menu {
+        .context-menu_top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--whitegrey1);
+            form {
+                display: flex;
+                width: 100%;
+                height: 50px;
+                background-color: var(--whitegrey2);
+                justify-content: flex-start;
+                align-items: center;
+                input {
+                    background-color: var(--whitegrey2);
+                    padding: 0 15px;
+                    font-size: 14px;
+                    flex: 1;
+                }
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 0;
+                    border-left: 1px solid var(--whitegrey1);
+                    i {
+                        scale: .9;
+                        padding-top: .3rem;
+                    }
+                }
+            }
+        }
+        .navigation {
+            margin-top: 30px;
+            nav ul li {
+                position: relative;
+                height: 40px;
+                a {
+                    padding: 8px 0;
+                    position: absolute;
+                    color: var(--blackColor2);
+                    width: 100%;
+                    height: 100%;
+                    transition: .3s;
+                    font-weight: 500;
+                    &:hover {
+                        color: var(--secondaryColor);
+                    }
+                }
+            }
+            nav {
+                padding-bottom: 30px;
+                border-bottom: 1px solid var(--whitegrey1);
+            }
+            .social_networks {
+                margin-top: 40px;
+                display: flex;
+                justify-content: flex-start;
+                gap: .2rem;
+            }
+        }
+    }
 `

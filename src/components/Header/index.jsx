@@ -1,6 +1,6 @@
 import { StyledDrawer, StyledHeader } from "./styled";
 import {
-    BsCart3, BsList, BsMenuApp, BsPencilFill, BsPeopleFill, BsPersonFill, BsX
+    BsCart3, BsFacebook, BsInstagram, BsList, BsMenuApp, BsPencilFill, BsPeopleFill, BsPersonFill, BsPinterest, BsSearch, BsTwitter, BsX, BsYoutube
 } from "react-icons/bs"
 import logo from "../../assets/images/logo.png"
 import { Button } from "../Button";
@@ -60,9 +60,85 @@ export function Header() {
             {menuHidden && (
                 <StyledDrawer className="animate-right">
                     <div className="btn-close" onClick={() => setMenuHidden(false)}>
-                        <BsX />
+                        <i>
+                            <BsX />
+                        </i>
                     </div>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid excepturi atque explicabo repellat, ex sapiente modi fugit! Facilis aspernatur, nam, quibusdam expedita error repellat quod asperiores maxime voluptate rerum consequuntur?
+                    <div className="context-menu">
+                        <div className="context-menu_top">
+                            <form>
+                                <input type="text" placeholder="Procure por um curso..."/>
+                                <Button bg="transparent">
+                                    <i>
+                                        <BsSearch />
+                                    </i>
+                                </Button>
+                            </form>
+                        </div>
+                        <div className="navigation">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="#">Início</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pages</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cursos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Ecomerce</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav>
+                                <br />
+                                <ul>
+                                    <li>
+                                        <a href="#">Minha Conta</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <ul className="social_networks">
+                                <li>
+                                    <Button bg="transparent" color="var(--facebookColor)">
+                                        <i>
+                                            <BsFacebook />
+                                        </i>
+                                    </Button>
+                                </li>
+                                <li>
+                                    <Button bg="transparent" color="#55acee">
+                                        <i>
+                                            <BsTwitter />
+                                        </i>
+                                    </Button>
+                                </li>
+                                <li>
+                                    <Button bg="transparent" color="var(--darkcolor)">
+                                        <i>
+                                            <BsPinterest />
+                                        </i>
+                                    </Button>
+                                </li>
+                                <li>
+                                    <Button bg="transparent" color="var(--secondaryColor)">
+                                        <i>
+                                            <BsInstagram />
+                                        </i>
+                                    </Button>
+                                </li>
+                                <li>
+                                    <Button bg="transparent" color="var(--secondaryColor3)">
+                                        <i>
+                                            <BsYoutube />
+                                        </i>
+                                    </Button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>                    
                 </StyledDrawer>
             )}
         </>
