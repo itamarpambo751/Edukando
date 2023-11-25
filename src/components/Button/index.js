@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button(({ 
-    color, bg, countBg, border, countColor 
-}) => `
+export const Button = styled.button(({ color, bg, countBg, border, countColor }) => `
     padding: 10px;
     border-radius: .25rem;
     position: relative;
@@ -13,6 +11,11 @@ export const Button = styled.button(({
     background: ${bg ? bg:'var(--primaryColor)'};
     border: ${border ? '1px solid var(--bodyColor)':'none'};
     height: 45px;
+    gap: .3rem;
+    cursor: pointer;
+    @media (max-width: 200px) {
+
+    }
     .count {
         position: absolute;
         width: 20px;
@@ -30,4 +33,5 @@ export const Button = styled.button(({
     svg {
         font-size: 20px;
     }
+    
 `)

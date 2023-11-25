@@ -1,6 +1,6 @@
 import { StyledHeader } from "./styled";
 import {
-    BsCart3, BsPeopleFill, BsPersonFill
+    BsCart3, BsList, BsMenuApp, BsPencilFill, BsPeopleFill, BsPersonFill
 } from "react-icons/bs"
 import logo from "../../assets/images/logo.png"
 import { Button } from "../Button";
@@ -32,18 +32,23 @@ export function Header() {
                             bg="transparent" 
                             countBg="var(--secondaryColor)" 
                             countColor="#fff"
-
                         >
                             <div className="count">
                                 3
                             </div>
                             <BsCart3 />
                         </Button>
-                        <Button bg="transparent" border>
+                        <Button bg="transparent" border className="btn-hide">
                             <BsPersonFill />
                         </Button>
-                        <Button color="#fff">
-                            Get Start
+                        <Button color="#fff" className="btn-hide">
+                            <BsPencilFill />
+                            Inscrever
+                        </Button>
+                        <Button className="menu-list" bg="transparent">
+                            <i className="icon-list-size">
+                                <BsList />
+                            </i>
                         </Button>
                     </div>
                 </div>
