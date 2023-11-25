@@ -64,6 +64,7 @@ export const StyledHeader = styled.header`
         }
     }
     @media (max-width: 1105px) {
+        background: transparent;
         div.container {
             .header-right-side {
                 nav {
@@ -81,4 +82,31 @@ export const StyledHeader = styled.header`
             }
         }
     }
+`
+
+export const StyledDrawer = styled.div`
+    width: 300px;
+    background: #FFF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 0px 50px 50px 50px rgba(0, 0, 0, .05);
+    .btn-close {
+        position: absolute;
+        left: -40px;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        background-color: #222;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
 `

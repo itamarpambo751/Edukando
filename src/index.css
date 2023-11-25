@@ -64,3 +64,24 @@
 body {
   background: var(--bodyBg);
 }
+.animate-right {
+  animation: anime-right .5s;
+}
+.anime-close-right {
+  animation: anime-right-invertion .3s;
+}
+@keyframes anime-right-invertion {
+  0% {
+    right: 0;
+  } 100% {
+    right: -340px;
+  }
+}
+
+@keyframes anime-right {
+  0% {
+    right: -340px;
+  } 100% {
+    right: 0;
+  }
+}
