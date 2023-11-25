@@ -1,4 +1,4 @@
-import { Header } from './components'
+import { Banner, Header } from './components'
 
 function App() {
   return (
@@ -6,6 +6,8 @@ function App() {
       <Header>
 
       </Header>
+      <Banner />
+      <div style={{height:'1000px'}}></div>
     </>
   )
 }

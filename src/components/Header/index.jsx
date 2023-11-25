@@ -58,13 +58,19 @@ export function Header() {
                 </div>
             </StyledHeader>
             {menuHidden && (
-                <StyledDrawer className="animate-right">
-                    <div className="btn-close" onClick={() => setMenuHidden(false)}>
+                <StyledDrawer className="animate-right" id="drawer">
+                    <div className="btn-close" onClick={(e) => {
+                        document.querySelector('#drawer').classList.replace('animate-right', 'anime-close-right')
+                        setTimeout(() => {
+                            setMenuHidden(false)
+                        }, 200);
+                    }}>
                         <i>
                             <BsX />
                         </i>
                     </div>
                     <div className="context-menu">
+                        <img src={logo} alt="logo" />
                         <div className="context-menu_top">
                             <form>
                                 <input type="text" placeholder="Procure por um curso..."/>

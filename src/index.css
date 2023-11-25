@@ -12,6 +12,7 @@
   --contentColor2: #5C727D;
   --facebookColor: #5d5dff;
   --primaryColor: #5F2DED;
+  --primaryColorOpacity: #7649f333;
   --secondaryColor: #F2277E;
   --secondaryColor2: #FF275A;
   --secondaryColor3: #FF2828;
@@ -69,19 +70,19 @@ body {
   animation: anime-right .5s;
 }
 .anime-close-right {
-  animation: anime-right-invertion .3s;
+  animation: anime-right-invertion .5s;
 }
 @keyframes anime-right-invertion {
   0% {
     right: 0;
   } 100% {
-    right: -390px;
+    right: -330px;
   }
 }
 
 @keyframes anime-right {
   0% {
-    right: -390px;
+    right: -330px;
   } 100% {
     right: 0;
   }
