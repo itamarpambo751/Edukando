@@ -25,8 +25,10 @@
   --contentColor2: #fff;
   --deepgreen: #fff;
   --bs-body-color: #fff;
+  --yellow1: #f3b704;
 }
 :root {
+  --yellow1: #f3b704;
   --bodyColor: #222222;
   --bodyBg: #fbfbfb;
   --bodyBg1: #F7F7F7;
@@ -89,7 +91,7 @@
   border: none;
   font-size: 16px;
   outline: none;
-  font-family: 'Poppins';
+  font-family: "Poppins", sans-serif;
 }
 body {
   background: var(--bodyBg);

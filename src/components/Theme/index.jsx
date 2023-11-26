@@ -1,7 +1,7 @@
-import { BsMoon, BsSun, BsSunFill } from "react-icons/bs"
+import { BsMoon, BsSun } from "react-icons/bs"
 import styled from "styled-components"
 
-import { useState, useEffect, useCallback } from "react"
+import { useState, useEffect } from "react"
 
 function OnInitColorTheme() {
     return localStorage.getItem("theme-color")

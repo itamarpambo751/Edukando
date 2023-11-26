@@ -10,6 +10,7 @@ export const StyledHeader = styled.header`
     top: -2px;
     z-index: 9999;
     align-items: center;
+    box-shadow: 0 0 50px 10px rgba(95, 45, 237, 0.15);  
     div.container {
         padding-top: .5rem;
         width: 85%;
