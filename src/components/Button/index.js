@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Button = styled.button(({ color, bg, countBg, border, countColor }) => `
-    padding: 10px;
-    border-radius: .25rem;
+    padding: 5px 10px;
+    border-radius: .3rem;
     position: relative;
     display: flex;
     color: ${color ? color:'black' };

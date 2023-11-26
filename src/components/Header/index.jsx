@@ -20,13 +20,16 @@ export function Header() {
                                     <a href="#">Início</a>
                                 </li>
                                 <li>
-                                    <a href="#">Pages</a>
+                                    <a href="#">Serviços</a>
                                 </li>
                                 <li>
                                     <a href="#">Cursos</a>
                                 </li>
                                 <li>
-                                    <a href="#">Ecommerce</a>
+                                    <a href="#">Por quê a Gaieta?</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contactos</a>
                                 </li>
                             </ul>
                         </nav>

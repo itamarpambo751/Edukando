@@ -1,12 +1,11 @@
-import { Banner, Header } from './components'
+import { Banner, Header, ToggleThemeButton } from './components'
 
 function App() {
   return (
     <>
-      <Header>
-
-      </Header>
+      <Header />
       <Banner />
+      <ToggleThemeButton />
       <div style={{height:'1000px'}}></div>
     </>
   )

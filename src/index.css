@@ -1,3 +1,30 @@
+.is_dark:root {
+  --bodyColor: #fff;
+  --bodyBg: #0C0E2B;
+  --bodyBg1: #0C0E2B;
+  --headingColor: #fff;
+  --blackColor: #fff;
+  --blackColor2: #fff;
+  --whiteColor: #0C0E2B;
+  --darkdeep2: #fff;
+  --darkblack: #fff;
+  --lightGrey: #0C0E2B;
+  --lightGrey7: #170F2F;
+  --lightGrey10: #170F2F;
+  --lightGrey11: #170F2F;
+  --contentColor: #fff;
+  --darkdeep5: #fff;
+  --borderColor: #312a57;
+  --whitegrey: #fff;
+  --whitegrey1: #312a57;
+  --whitegrey2: #312a57;
+  --deepgray: #fff;
+  --borderColor2: #fff;
+  --darkdeep3: #17093e;
+  --contentColor2: #fff;
+  --deepgreen: #fff;
+  --bs-body-color: #fff;
+}
 :root {
   --bodyColor: #222222;
   --bodyBg: #fbfbfb;
@@ -12,7 +39,7 @@
   --contentColor2: #5C727D;
   --facebookColor: #5d5dff;
   --primaryColor: #5F2DED;
-  --primaryColorOpacity: #7649f333;
+  --primaryColorOpacity: #3911a580;
   --secondaryColor: #F2277E;
   --secondaryColor2: #FF275A;
   --secondaryColor3: #FF2828;
@@ -79,7 +106,6 @@ body {
     right: -330px;
   }
 }
-
 @keyframes anime-right {
   0% {
     right: -330px;

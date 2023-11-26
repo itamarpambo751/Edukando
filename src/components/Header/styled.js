@@ -1,13 +1,14 @@
 import styled from "styled-components"
 
 export const StyledHeader = styled.header`
+    margin-top: -2px;
     width: 100%;
-    height: 110px;
+    height: 90px;
     background: #fff;
     display: flex;
     position: sticky;
-    top: 0;
-    z-index: 10000;
+    top: -2px;
+    z-index: 9999;
     align-items: center;
     div.container {
         padding-top: .5rem;
@@ -19,12 +20,18 @@ export const StyledHeader = styled.header`
         .header-right-side {
             display: flex;
             align-items: center;
-            gap: 10rem;
+            gap: 4rem;
             nav ul {
                 display: flex;
                 gap: 3rem;
                 li a {
                     color: var(--blackColor);
+                }
+            }
+            nav ul li {
+                font-weight: 600;
+                &:hover a {
+                    color: var(--primaryColor);
                 }
             }
             .account-section {
@@ -67,7 +74,7 @@ export const StyledHeader = styled.header`
         }
     }
     @media (max-width: 1105px) {
-        background: var(--bodyBg);
+        /* background: var(--bodyBg); */
         div.container {
             .header-right-side {
                 nav {
@@ -90,12 +97,13 @@ export const StyledHeader = styled.header`
 export const StyledDrawer = styled.div`
     width: 290px;
     background: #FFF;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     padding: 25px;
     box-shadow: 0px 50px 50px 50px rgba(0, 0, 0, .05);
+    z-index: 10000;
     .btn-close {
         position: absolute;
         left: -40px;
