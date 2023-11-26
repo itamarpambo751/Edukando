@@ -4,7 +4,7 @@ export const StyledHeader = styled.header`
     margin-top: -2px;
     width: 100%;
     height: 90px;
-    background: #fff;
+    background: var(--bodyBg);
     display: flex;
     position: sticky;
     top: -2px;
@@ -39,11 +39,16 @@ export const StyledHeader = styled.header`
                 align-items: center;
                 justify-content: flex-start;
                 gap: .7rem;
+                .btn-cart3 .cart3 {
+                    color: var(--bodyColor);
+                }
                 .menu-list {
                     display: none;
                     padding-top: 1.2rem;
+                    
                     .icon-list-size {
                         transform: scale(1.5);
+                        color: var(--bodyColor);
                     }
                 }
             }
@@ -96,7 +101,7 @@ export const StyledHeader = styled.header`
 
 export const StyledDrawer = styled.div`
     width: 290px;
-    background: #FFF;
+    background: var(--whitegrey2);
     position: fixed;
     top: 0;
     right: 0;
@@ -111,7 +116,7 @@ export const StyledDrawer = styled.div`
         height: 40px;
         top: 0;
         background-color: var(--darkblack);
-        color: white;
+        color: var(--bodyBg);
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -132,14 +137,15 @@ export const StyledDrawer = styled.div`
                 display: flex;
                 width: 100%;
                 height: 50px;
-                background-color: var(--whitegrey2);
+                background-color: var(--whitegrey3);
                 justify-content: flex-start;
                 align-items: center;
                 input {
-                    background-color: var(--whitegrey2);
+                    background-color: var(--whitegrey3);
                     padding: 0 15px;
                     font-size: 14px;
                     flex: 1;
+                    color: var(--bodyColor);
                 }
                 button {
                     display: flex;
@@ -150,6 +156,7 @@ export const StyledDrawer = styled.div`
                     i {
                         scale: .9;
                         padding-top: .3rem;
+                        color: var(--bodyColor);
                     }
                 }
             }

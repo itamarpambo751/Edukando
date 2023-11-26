@@ -38,11 +38,14 @@ export function Header() {
                                 bg="transparent" 
                                 countBg="var(--secondaryColor)" 
                                 countColor="#fff"
+                                className="btn-cart3"
                             >
                                 <div className="count">
                                     3
                                 </div>
-                                <BsCart3 />
+                                <i className="cart3">
+                                    <BsCart3 />
+                                </i>
                             </Button>
                             <Button bg="transparent" border className="btn-hide">
                                 <BsPersonFill />

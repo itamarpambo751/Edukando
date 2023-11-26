@@ -1,42 +1,43 @@
-import { BsMoon } from "react-icons/bs"
+import { BsMoon, BsSun, BsSunFill } from "react-icons/bs"
 import styled from "styled-components"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 
-function OnChangeColorTheme() {
-    if (localStorage.getItem("theme-color") === "light") {
-        localStorage.setItem("theme-color", "dark")
-        document.documentElement.classList.add("is_dark")
-    } else {
-        localStorage.setItem("theme-color", "light")
-        document.documentElement.classList.remove("is_dark")
-    }
-}
-function OnInitGetCurretColorTheme() {
+function OnInitColorTheme() {
     return localStorage.getItem("theme-color")
 }
 export default function ToggleThemeButton() {
+    const [theme, setTheme] = useState(() => OnInitColorTheme())
     useEffect(() => {
-        if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage))) {
+        if (localStorage.getItem("theme-color") === "Dark" || (!("theme-color" in localStorage))) {
             document.documentElement.classList.add("is_dark")
         }
     }, [])
+    useEffect(() => {
+        if (localStorage.getItem("theme-color") === "Light") {
+            localStorage.setItem("theme-color", "Dark")
+            document.documentElement.classList.add("is_dark")
+        } else {
+            localStorage.setItem("theme-color", "Light")
+            document.documentElement.classList.remove("is_dark")
+        }
+    }, [theme])
     return(
-        <LightOrDarkButton onClick={OnChangeColorTheme}>
+        <LightOrDarkButton onClick={() => setTheme(theme === "Light" ? "Dark":"Light")} theme={theme}>
             <i>
-                <BsMoon />
+                {theme === "Dark" ? <BsSun />:<BsMoon />}
             </i>
             <span>
-                Dark
+                {theme === "Light" ? "Dark":"Light"}
             </span>
         </LightOrDarkButton>
     )
 }
 
-const LightOrDarkButton = styled.button(({ theme }) => `
+const LightOrDarkButton = styled.button(({ theme }) => ` 
     position: fixed;
-    right: 0;
-    top: 300px;
+    right: -50px;
+    top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,8 +46,14 @@ const LightOrDarkButton = styled.button(({ theme }) => `
     height: 40px;
     border-radius: 15px 0 0 15px;
     gap: .2rem;
-    background-color: var(--primaryColor);
+    background-color: ${theme === "Light" ? "var(--primaryColor)":"var(--darkdeep3)"};
     color: #FFF;
     cursor: pointer;
     transition: all.2s ease-in-out;
+    &:hover {
+        right: 0;
+    }
+    i {
+        margin-top: .3rem;
+    }
 `)
