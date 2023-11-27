@@ -50,6 +50,7 @@ const LightOrDarkButton = styled.button(({ theme }) => `
     color: #FFF;
     cursor: pointer;
     transition: all.2s ease-in-out;
+    z-index: 10000;
     &:hover {
         right: 0;
     }
