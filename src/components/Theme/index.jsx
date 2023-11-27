@@ -1,13 +1,13 @@
 import { BsMoon, BsSun } from "react-icons/bs"
 import styled from "styled-components"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 
-function OnInitColorTheme() {
-    return localStorage.getItem("theme-color")
-}
 export default function ToggleThemeButton() {
-    const [theme, setTheme] = useState(() => OnInitColorTheme())
+    const loadLocalStorageThemeData = useCallback(() => {
+        return localStorage.getItem("theme-color")
+    }, [])
+    const [colorTheme, setColorTheme] = useState(() => loadLocalStorageThemeData())
     useEffect(() => {
         if (localStorage.getItem("theme-color") === "Dark" || (!("theme-color" in localStorage))) {
             document.documentElement.classList.add("is_dark")
@@ -21,14 +21,14 @@ export default function ToggleThemeButton() {
             localStorage.setItem("theme-color", "Light")
             document.documentElement.classList.remove("is_dark")
         }
-    }, [theme])
+    }, [colorTheme])
     return(
-        <LightOrDarkButton onClick={() => setTheme(theme === "Light" ? "Dark":"Light")} theme={theme}>
+        <LightOrDarkButton onClick={() => setColorTheme(colorTheme === "Light" ? "Dark":"Light")} theme={colorTheme}>
             <i>
-                {theme === "Dark" ? <BsSun />:<BsMoon />}
+                {colorTheme === "Light" ? <BsMoon />:<BsSun />}
             </i>
             <span>
-                {theme === "Light" ? "Dark":"Light"}
+                {colorTheme === "Light" ? "Dark":"Light"}
             </span>
         </LightOrDarkButton>
     )

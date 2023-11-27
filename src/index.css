@@ -94,7 +94,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background: var(--whiteColor);
+  background: var(--bodyBg);
 }
 .animate-right {
   animation: anime-right .5s;
