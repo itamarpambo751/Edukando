@@ -1,12 +1,10 @@
 import styled from 'styled-components'
-import { Banner, Header, ToggleThemeButton } from './components'
+import { Banner, Header, OurNumbers, ToggleThemeButton } from './components'
 import { BsCheck } from 'react-icons/bs'
 
 import about_2 from "./assets/images/about/about_2.png"
 import about_3 from "./assets/images/about/about_3.png"
 import about_11 from "./assets/images/about/about_11.png"
-
-
 
 function App() {
   return (
@@ -67,6 +65,8 @@ function App() {
           </ul>
         </div>
       </StyledAboutSection>
+
+      <OurNumbers />
 
       <div style={{height:'1000px'}}></div>
     </>
