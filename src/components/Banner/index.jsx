@@ -20,8 +20,8 @@ export function Banner() {
                     <span>GaietaInspira</span>
                     <h1>Transformando 
                         <TextDecoration> Ideias</TextDecoration> em 
-                        <TextDecoration> Impacto Exponencial</TextDecoration><br /> 
-                        online
+                        <TextDecoration> Impacto Exponencial </TextDecoration><br className="breaker"/> 
+                         online
                     </h1>
                     <div className="registerarea__video">
                         <div>
@@ -101,10 +101,76 @@ const StyledBanner = styled.div`
             }
         }
     }
+    @media (max-width: 700px) {
+        h1 {
+            width: 100%;
+            line-height: 40px;
+            font-size: 40px;
+            .breaker {
+                display: none;
+            }
+        }
+        #banner_shadow {
+            .container {
+                width: 95%;
+                .registerarea__video {
+                    width: 100%;
+                    margin-top: 20px;
+                    .video__pop__btn {
+                        width: 60px;
+                        min-height: 60px;
+                        max-height: 60px;
+                        border-radius: calc(60px/2);
+                    }
+                    p {
+                        font-size: 15px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 689px) {
+        h1 {
+            font-size: 37px;
+        }
+    }
+    @media (max-width: 453px) {
+        h1 {
+            width: 100%;
+            line-height: 40px;
+            font-size: 40px;
+            .breaker {
+                display: none;
+            }
+        }
+        #banner_shadow {
+            .container {
+                width: 95%;
+                .registerarea__video {
+                    width: 100%;
+                    margin-top: 20px;
+                    .video__pop__btn {
+                        width: 60px;
+                        min-height: 60px;
+                        max-height: 60px;
+                        border-radius: calc(60px/2);
+                    }
+                    p {
+                        font-size: 15px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 `
 const TextDecoration = styled.small`
     color: var(--yellow1);
     font-size: 43px;
+    @media (max-width: 700px) {
+        font-size: 35px;
+    }
 `
 const FloatingIconsTopCollection = styled.div`
     position: absolute;

@@ -79,7 +79,7 @@ export function Header() {
                         <img src={logo} alt="logo" />
                         <div className="context-menu_top">
                             <form>
-                                <input type="text" placeholder="Procure por um curso..."/>
+                                <input type="search" placeholder="Procure por um curso..."/>
                                 <Button bg="transparent">
                                     <i>
                                         <BsSearch />

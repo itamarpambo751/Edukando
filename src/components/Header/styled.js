@@ -4,7 +4,7 @@ export const StyledHeader = styled.header`
     margin-top: -2px;
     width: 100%;
     height: 90px;
-    background: var(--bodyBg);
+    background: var(--whiteColor);
     display: flex;
     position: sticky;
     top: -2px;
@@ -102,7 +102,7 @@ export const StyledHeader = styled.header`
 
 export const StyledDrawer = styled.div`
     width: 290px;
-    background: var(--whitegrey2);
+    background: var(--whiteColor);
     position: fixed;
     top: 0;
     right: 0;
