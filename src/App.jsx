@@ -18,6 +18,12 @@ function App() {
             <img src={about_11} id='back_img'/>
             <img src={about_2} id='main_img'/>
             <img src={about_3} id='right_img'/>
+            <div class="aboutarea__2__text">
+              <div class="aboutarea__counter">
+                <span class="counter">5</span> +
+              </div>
+              <p>DE EXPERIÊNCIA INSPIRANDO SONHOS</p>
+            </div>
           </div>
         </div>
         <div className='about_right_side'>
@@ -132,6 +138,51 @@ const StyledAboutSection = styled.div`
         position: absolute;
         right: 30px;
         bottom: 0;
+      }
+      .aboutarea__2__text {
+        background: var(--whiteColor);
+        display: flex;
+        border-left: 4px solid var(--primaryColor);
+        max-width: 290px;
+        box-shadow: 0px 30px 40px 0px rgba(1, 11, 60, 0.06);
+        align-items: center;
+        justify-content: center;
+        padding: 25px 10px;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        animation: move5 3s infinite linear;
+        .aboutarea__counter {
+          display: flex;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 48px;
+          color: var(--primaryColor);
+          padding-right: 10px;
+          .counter {
+            font-size: 40px;
+          }
+        }
+        p {
+          line-height: 26px;
+          font-weight: 700;
+          color: var(--blackColor);
+          margin: 0;
+        }
+      }
+      @keyframes move5 {
+        0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+        50% {
+            -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
       }
     }
   }
