@@ -5,6 +5,7 @@ import { BsCheck } from 'react-icons/bs'
 import about_2 from "./assets/images/about/about_2.png"
 import about_3 from "./assets/images/about/about_3.png"
 import about_11 from "./assets/images/about/about_11.png"
+import Team from './components/Team'
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
 
       <OurNumbers />
 
+      <Team />
       <div style={{height:'1000px'}}></div>
     </>
   )

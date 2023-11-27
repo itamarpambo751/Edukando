@@ -6,7 +6,7 @@ import counter_4 from "../../assets/images/counter/counter__4.png"
 
 export default function OurNumbers() {
     return(
-        <AllNumbers>
+        <StyledSectionCounter>
             <ul>
                 <li>
                     <img src={counter_1} alt="" />
@@ -37,11 +37,11 @@ export default function OurNumbers() {
                     </div>
                 </li>
             </ul>
-        </AllNumbers>
+        </StyledSectionCounter>
     )
 }
 
-const AllNumbers = styled.div`
+const StyledSectionCounter = styled.div`
     margin-top: 90px;
     width: 100%;
     ul {
@@ -55,9 +55,6 @@ const AllNumbers = styled.div`
             align-items: center;
             gap: 1rem;
             flex: 1;
-            img {
-                scale: 1.1;
-            }
             div { 
                 h2 {
                     font-weight: 700;
@@ -68,6 +65,7 @@ const AllNumbers = styled.div`
                 }
                 span {
                     font-weight: 500;
+                    color: var(--blackColor);
                 }   
             }
         }
@@ -87,6 +85,4 @@ const AllNumbers = styled.div`
             }
         }
     }
-    
-    
 `
