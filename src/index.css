@@ -96,6 +96,11 @@
 body {
   background: var(--bodyBg);
 }
+@media (max-width: 400px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 .animate-right {
   animation: anime-right .5s;
 }

@@ -6,6 +6,8 @@ import about_2 from "./assets/images/about/about_2.png"
 import about_3 from "./assets/images/about/about_3.png"
 import about_11 from "./assets/images/about/about_11.png"
 
+
+
 function App() {
   return (
     <>
@@ -31,27 +33,35 @@ function App() {
           <span className='about_sub_title'>Em Angola, vocacionanda à inspiração e impacto social...</span>
           <ul>
             <li>
-              <i>
-                <BsCheck />
-              </i>
+              <div>
+                <i>
+                  <BsCheck />
+                </i>
+              </div>
               <span>Formação e Treinamento</span>
             </li>
             <li>
-              <i>
-                <BsCheck />
-              </i>
+              <div>
+                <i>
+                  <BsCheck />
+                </i>
+              </div>
               <span>Desenvolvimento pessoal e profissional</span>
             </li>
             <li>
-              <i>
-                <BsCheck />
-              </i>
+              <div>
+                <i>
+                  <BsCheck />
+                </i>
+              </div>
               <span>Organização de eventos culturais e corporativos</span>
             </li>
             <li>
-              <i>
-                <BsCheck />
-              </i>
+              <div>
+                <i>
+                  <BsCheck />
+                </i>
+              </div>
               <span>Serviços de consultoria individual e empresarial</span>
             </li>
           </ul>
@@ -224,7 +234,7 @@ const StyledAboutSection = styled.div`
     width: 90%;
   }
   @media (max-width: 635px) {
-    margin-top: -200px;
+    margin-top: -190px;
     #about_imgs {
       display: flex;
       justify-content: center;
@@ -290,10 +300,30 @@ const StyledAboutSection = styled.div`
           position: absolute;
           top: 200px;
           width: 60%;
-          right: -80px;
+          right: -70px;
           bottom: 0;
         }
         
+      }
+    }
+  }
+  @media (max-width: 453px) {
+    #about_imgs {
+      #about_img_group {
+        #main_img {
+          margin-left: -85px;
+          width: ${screen.width - 8 + 'px'};
+        }
+      }
+    }
+  }
+  @media (max-width: 330px) {
+    #about_imgs {
+      #about_img_group {
+        #main_img {
+          margin-left: -75px;
+          width: ${screen.width - 8 + 'px'};
+        }
       }
     }
   }
