@@ -10,7 +10,6 @@ import image6 from "../../assets/images/blog/blog_20.png"
 import image7 from "../../assets/images/blog/blog_28.jpg"
 import image8 from "../../assets/images/blog/blog_30.jpg"
 
-
 const team = [
     {
         image: image,
@@ -59,10 +58,11 @@ export default function Team() {
             </div>
             {viewing && (
                 <ViewTeamMember>
-                   
                     <div className="img_container">
                         <button id="img_container_close" onClick={() => setViewing(null)}>
-                            <i><BsX/></i>
+                            <i>
+                                <BsX/>
+                            </i>
                         </button>
                         <img src={viewing} alt="team_member" />
                     </div>
@@ -83,6 +83,7 @@ const StyledTeamContainer = styled.div`
         gap: 5px;
         grid-template-columns: repeat(4, 1fr);
         border: 1px solid var(--borderColor2);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.02);
         figure {
             position: relative;
             img {
@@ -111,6 +112,12 @@ const StyledTeamContainer = styled.div`
                 }
             }
         }
+        @media (max-width: 720px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (max-width: 720px) {
+        margin-top: 50px;
     }
 `
 const ViewTeamMember = styled.div`

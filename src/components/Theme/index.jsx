@@ -49,7 +49,7 @@ const LightOrDarkButton = styled.button(({ theme }) => `
     background-color: ${theme === "Light" ? "var(--primaryColor)":"var(--darkdeep3)"};
     color: #FFF;
     cursor: pointer;
-    transition: all.2s ease-in-out;
+    transition: .2s ease-in-out;
     z-index: 9999;
     &:hover {
         right: 0;

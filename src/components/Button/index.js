@@ -12,10 +12,8 @@ export const Button = styled.button(({ color, bg, countBg, border, countColor })
     border: ${border ? '1px solid var(--bodyColor)':'none'};
     height: 45px;
     gap: .3rem;
+    transition: all 0s;
     cursor: pointer;
-    @media (max-width: 200px) {
-
-    }
     .count {
         position: absolute;
         width: 20px;
@@ -33,5 +31,4 @@ export const Button = styled.button(({ color, bg, countBg, border, countColor })
     svg {
         font-size: 20px;
     }
-    
 `)

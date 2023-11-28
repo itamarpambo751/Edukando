@@ -6,6 +6,7 @@ import FloatintIcons from "../FloatingIcons";
 import img1 from "../../assets/images/register/register__1.png"
 import img2 from "../../assets/images/register/register__2.png"
 import img3 from "../../assets/images/register/register__3.png"
+import TitleSpan from "../TitleSpan";
 
 export function Banner() {
     return(
@@ -17,7 +18,7 @@ export function Banner() {
                         <img class="register__2" src={img2} alt="register"/>
                         <img class="register__3" src={img3} alt="register"/>
                     </FloatingIconsTopCollection>
-                    <span>GaietaInspira</span>
+                    <TitleSpan>GaietaInspira</TitleSpan>
                     <h1>Transformando 
                         <TextDecoration> Ideias</TextDecoration> em 
                         <TextDecoration> Impacto Exponencial </TextDecoration><br className="breaker"/> 
@@ -49,15 +50,6 @@ const StyledBanner = styled.div`
     display: flex;
     position: relative;
     background-image: url(${bannerImage});
-    span {
-        background-color: #E7DEFF;
-        padding: 5px 23px;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 1.5;
-        border-radius: 20px;
-        color: #5F2DED;
-    }
     h1 {
         color: #FFF;
         font-size: 45px;

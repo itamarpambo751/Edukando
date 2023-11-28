@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Banner, Header, OurNumbers, ToggleThemeButton } from './components'
+import { Banner, Header, OurNumbers, ServicesSection, ToggleThemeButton } from './components'
 import { BsCheck } from 'react-icons/bs'
 
 import about_2 from "./assets/images/about/about_2.png"
@@ -70,6 +70,8 @@ function App() {
       <OurNumbers />
 
       <Team />
+
+      <ServicesSection />
       <div style={{height:'1000px'}}></div>
     </>
   )
