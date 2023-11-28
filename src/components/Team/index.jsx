@@ -80,21 +80,19 @@ const StyledTeamContainer = styled.div`
         padding: 2rem;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: .7rem;
+        gap: 5px;
+        grid-template-columns: repeat(4, 1fr);
         border: 1px solid var(--borderColor2);
         figure {
             position: relative;
-            height: 250px;
-            flex: 1;
             img {
-                position: absolute;
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
             }
             figcaption {
                 position: absolute;
+                top: 0;
+                left: 0;
                 width: 100%;
                 height: 100%;
                 z-index: 999;
@@ -125,7 +123,7 @@ const ViewTeamMember = styled.div`
     padding: 0 8px;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, .8);
-    z-index: 9999;
+    z-index: 10000;
 
     display: flex;
     justify-content: center;
