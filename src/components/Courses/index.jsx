@@ -126,15 +126,6 @@ const StyledCoursesSection = styled.div`
         @media (max-width: 1150px) {
             width: 95%;
         }
-        @media (max-width: 991px) {
-            width: 80%;
-        }
-        @media (max-width: 909px) {
-            width: 90%;
-        }
-        @media (max-width: 877px) {
-            width: 95%;
-        }
         @media (max-width: 730px) {
             width: 85%;
         }
@@ -302,14 +293,6 @@ const StyledCoursesSection = styled.div`
         grid-template-columns: repeat(3, 1fr);
         margin-top: 70px;
         gap: 2%;
-        @media (max-width: 1365px) {
-            .grid-item {
-                transform: scale(1);
-            }
-        }
-        @media (max-width: 1290px) {
-           
-        }
         @media (max-width: 991px) {
             width: 100%;
             grid-template-columns: repeat(2, 1fr);
@@ -319,23 +302,15 @@ const StyledCoursesSection = styled.div`
             }
         }
         @media (max-width: 909px) {
-            grid-gap: 5cqmin;
-        }
-        @media (max-width: 844px) {
             grid-gap: 2cqmin;
         }
         @media (max-width: 815px) {
             width: 100%;
-            transform: scale(.9);
-            margin-left: -30px;
-            margin-top: -10px;
-            grid-gap: 5cqmin;
-        }
-        @media (max-width: 756px) {
+            transform: scale(.98) translateX(-6px) translateY(30px);
             grid-gap: 2cqmin;
-            margin-left: -35px;
+            margin: 0 auto;
         }
-        @media (max-width: 730px) {
+        @media (max-width: 645px) {
             width: 100%;
             padding-top: 40px;
             transform: scale(1);
