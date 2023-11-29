@@ -97,6 +97,17 @@
 body {
   background: var(--bodyBg);
 }
+del {
+  position: relative;
+}
+del::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  border-top: 2px solid var(--darkdeep4);
+  top: 50%;
+}
+
 @media (max-width: 400px) {
   body {
     overflow-x: hidden;
@@ -121,5 +132,21 @@ body {
   } 100% {
     right: 0;
   }
+}
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }   
+}
+@keyframes extra-bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-80px);
+  }   
 }
  

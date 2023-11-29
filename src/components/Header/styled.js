@@ -108,7 +108,7 @@ export const StyledDrawer = styled.div`
     right: 0;
     height: 100vh;
     padding: 25px;
-    box-shadow: 0px 50px 50px 50px rgba(0, 0, 0, .05);
+    box-shadow: 0px 50px 50px 50px rgba(95, 45, 237, 0.15);
     z-index: 10000;
     .btn-close {
         position: absolute;

@@ -1,4 +1,5 @@
 import { Banner } from "./Banner";
+import Courses from "./Courses";
 import { Header } from "./Header";
 import OurNumbers from "./Numbers";
 import ServicesSection from "./Services";
@@ -11,5 +12,6 @@ export {
     ToggleThemeButton,
     OurNumbers,
     TitleSpan,
-    ServicesSection
+    ServicesSection,
+    Courses
 }

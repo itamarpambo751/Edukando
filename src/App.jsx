@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Banner, Header, OurNumbers, ServicesSection, ToggleThemeButton } from './components'
+import { Banner, Courses, Header, OurNumbers, ServicesSection, ToggleThemeButton } from './components'
 import { BsCheck } from 'react-icons/bs'
 
 import about_2 from "./assets/images/about/about_2.png"
@@ -72,7 +72,9 @@ function App() {
       <Team />
 
       <ServicesSection />
-      <div style={{height:'1000px'}}></div>
+
+      <Courses />
+      <div style={{height:'2000px'}}></div>
     </>
   )
 }
@@ -91,6 +93,9 @@ const StyledAboutSection = styled.div`
       font-weight: 600;
       margin-bottom: 30px;
       color: var(--blackColor2);
+      @media (max-width: 1290px) {
+        font-size: 40px;
+      }
     }
     .about_sub_title {
       color: #5F6C76;
