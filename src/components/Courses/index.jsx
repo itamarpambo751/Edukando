@@ -5,14 +5,16 @@ import grid_1 from "../../assets/images/grid/grid_1.png"
 import grid_2 from "../../assets/images/grid/grid_2.png"
 import grid_small from "../../assets/images/grid/grid_small_5.jpg"
 
-import { BsBookHalf, BsBookshelf, BsClock, BsHeartFill, BsStarFill } from "react-icons/bs"
+import { BsBookHalf, BsClock, BsHeartFill, BsStarFill } from "react-icons/bs"
 
 function CourseCard() {
     return (
         <div class="grid-item">
             <div class="gridarea__wraper">
                 <div class="gridarea__img">
-                    <a href="course-details.html"><img src={grid_1} alt="grid" className="gridarea__course__img"/></a>
+                    <a href="course-details.html">
+                        <img src={grid_1} alt="grid" className="gridarea__course__img"/>
+                    </a>
                     <div class="gridarea__small__button">
                         <div class="grid__badge orange__color">Data &amp; Tech</div>
                     </div>
@@ -24,16 +26,23 @@ function CourseCard() {
                     <div class="gridarea__list">
                         <ul>
                             <li>
-                                <i class="icofont-book-alt"><BsBookHalf /></i> 36 Lesson
+                                <i class="icofont-book-alt">
+                                    <BsBookHalf />
+                                </i> 36 Lesson
                             </li>
                             <li>
-                                <i class="icofont-clock-time"><BsClock /></i> 3 hr 40 min
+                                <i class="icofont-clock-time">
+                                    <BsClock />
+                                </i> 3 hr 40 min
                             </li>
                         </ul>
                     </div>
                     <div class="gridarea__heading">
-                        <h3><a href="course-details.html">Data course to under stand
-                            about solution</a></h3>
+                        <h3>
+                            <a href="course-details.html">
+                                Data course to under stand about solution
+                            </a>
+                        </h3>
                     </div>
                     <div class="gridarea__price">
                         $40.00 <del>/ $67.00</del>
@@ -49,11 +58,11 @@ function CourseCard() {
                             </div>
                         </a>
                         <div class="gridarea__star">
-                            <i><BsStarFill /> </i>
-                            <i><BsStarFill /> </i>
-                            <i><BsStarFill /> </i>
-                            <i><BsStarFill /> </i>
-                            <i><BsStarFill /> </i>
+                            <i><BsStarFill /></i>
+                            <i><BsStarFill /></i>
+                            <i><BsStarFill /></i>
+                            <i><BsStarFill /></i>
+                            <i><BsStarFill /></i>
                             <span>(44)</span>
                         </div>
                     </div>
@@ -102,13 +111,13 @@ const StyledCoursesSection = styled.div`
     margin-top: 220px;
     padding-top: 120px;
     padding-bottom: 100px;
-    @media (max-width: 909px) {
+    @media (max-width: 909px) and (min-width: 539px) {
         margin-top: 520px;
     }
-    @media (max-width: 538px) {
+    @media (max-width: 538px) and (min-width: 501px) {
         margin-top: 1010px;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 500px) and (min-width: 390px){
         margin-top: 1050px;
     }
     @media (max-width: 391px) and (min-width: 375px) {
@@ -126,7 +135,7 @@ const StyledCoursesSection = styled.div`
         @media (max-width: 1150px) {
             width: 95%;
         }
-        @media (max-width: 730px) {
+        @media (max-width: 650px) {
             width: 85%;
         }
     } 
@@ -176,11 +185,56 @@ const StyledCoursesSection = styled.div`
             }
         }
     }
-    
+    .row.grid {
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 70px;
+        gap: 2%;
+        @media (max-width: 991px) {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 1%;
+            .grid-item {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: 909px) {
+            grid-gap: 2cqmin;
+        }
+        @media (max-width: 815px) {
+            width: 100%;
+            transform: scale(.98) translateX(-6px) translateY(30px);
+            grid-gap: 2cqmin;
+            margin: 0 auto;
+        }
+        @media (max-width: 645px) {
+            width: 100%;
+            padding-top: 40px;
+            transform: scale(1);
+            display: block;
+            margin: 0 auto;
+            .grid-item {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .grid-item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .gridarea__wraper {
+            background: var(--whiteColor);
+            padding: 15px;
+            box-shadow: 0 0 20px 10px rgba(95, 45, 237, 0.05);
+            position: relative;
+        }
+    }
     .gridarea__img .gridarea__course__img {
         width: 100%;
     }
-    
     .gridarea__small__icon {
             position: absolute;
             top: 20px;
@@ -198,7 +252,6 @@ const StyledCoursesSection = styled.div`
             align-items: center;
             cursor: pointer;
     }
-    
     .gridarea__wraper .gridarea__content .gridarea__list {
             margin-bottom: 15px;
     }
@@ -284,56 +337,4 @@ const StyledCoursesSection = styled.div`
             padding: 3px 15px;
             line-height: 1;
     }
-    
-    .row.grid {
-        width: 100%;
-        margin: 0 auto;
-        display: grid;
-        gap: 5px;
-        grid-template-columns: repeat(3, 1fr);
-        margin-top: 70px;
-        gap: 2%;
-        @media (max-width: 991px) {
-            width: 100%;
-            grid-template-columns: repeat(2, 1fr);
-            grid-row-gap: 1%;
-            .grid-item {
-                margin-bottom: 0;
-            }
-        }
-        @media (max-width: 909px) {
-            grid-gap: 2cqmin;
-        }
-        @media (max-width: 815px) {
-            width: 100%;
-            transform: scale(.98) translateX(-6px) translateY(30px);
-            grid-gap: 2cqmin;
-            margin: 0 auto;
-        }
-        @media (max-width: 645px) {
-            width: 100%;
-            padding-top: 40px;
-            transform: scale(1);
-            display: block;
-            margin: 0 auto;
-            .grid-item {
-                margin-bottom: 30px;
-            }
-        }
-    }
-    .grid-item {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        .gridarea__wraper {
-            background: var(--whiteColor);
-            padding: 15px;
-            box-shadow: 0 0 20px 10px rgba(95, 45, 237, 0.05);
-            position: relative;
-        }
-    }
 `
-
-//1290px redux
-
-//2 columns 991px ate 576px vai para 1

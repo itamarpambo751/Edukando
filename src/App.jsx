@@ -1,11 +1,10 @@
 import styled from 'styled-components'
-import { Banner, Courses, Header, OurNumbers, ServicesSection, ToggleThemeButton } from './components'
+import { Banner, Courses, Header, OurNumbers, ServicesSection, Subscribe, Team, ToggleThemeButton } from './components'
 import { BsCheck } from 'react-icons/bs'
 
 import about_2 from "./assets/images/about/about_2.png"
 import about_3 from "./assets/images/about/about_3.png"
 import about_11 from "./assets/images/about/about_11.png"
-import Team from './components/Team'
 
 function App() {
   return (
@@ -74,6 +73,8 @@ function App() {
       <ServicesSection />
 
       <Courses />
+
+      <Subscribe />
       <div style={{height:'2000px'}}></div>
     </>
   )
