@@ -42,7 +42,7 @@ const Formulary = styled.form`
     top: 90px;
     right: 150px;
     padding: 40px;
-    background-color: var(--lightGrey7);
+    background-color: var(--bodyBg);
     h2 {
         font-size: 1.2rem;
         font-weight: 600;
@@ -67,6 +67,7 @@ const Input = styled.input`
     padding: 12px 10px;
     width: 100%;
     font-size: 1.1rem;
+    color: var(--bodyColor);
     background-color: var(--lightGrey8);
 `
 const TextArea = styled.textarea`

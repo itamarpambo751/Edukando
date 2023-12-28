@@ -37,7 +37,7 @@ export default function ToggleThemeButton() {
 const LightOrDarkButton = styled.button(({ theme }) => ` 
     position: fixed;
     right: -50px;
-    top: 100px;
+    top: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
