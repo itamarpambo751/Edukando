@@ -6,7 +6,7 @@ import img3 from "../../assets/images/herobanner/herobanner__7.png"
 export default function FloatintIcons() {
     return(
         <HeroBannerAreaIcon class="herobannerarea__icon">
-            <img class="hero__icon__1" src={img1} alt="photo"/>
+           {/*  <img class="hero__icon__1" src={img1} alt="photo"/> */}
             <img class="hero__icon__2" src={img2} alt="photo"/>
             <img class="hero__icon__3" src={img3} alt="photo"/>
             <img class="hero__icon__4" src={img3} alt="photo"/>
