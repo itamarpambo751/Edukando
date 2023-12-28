@@ -1,6 +1,7 @@
 .is_dark:root {
   --bodyColor: #fff;
   --bodyBg: #0C0E2B;
+  --banner: #0C0E2B;
   --bodyBg1: #0C0E2B;
   --headingColor: #fff;
   --blackColor: #fff;
@@ -29,6 +30,7 @@
   --yellow1: #f3b704;
 }
 :root {
+  --banner: #F8F8F8;
   --yellow1: #f3b704;
   --bodyColor: #222222;
   --bodyBg: #fbfbfb;
@@ -97,6 +99,9 @@
 }
 body {
   background: var(--bodyBg);
+}
+button {
+  cursor: pointer;
 }
 del {
   position: relative;
