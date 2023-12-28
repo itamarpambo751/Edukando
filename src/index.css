@@ -119,6 +119,11 @@ del::before {
     overflow-x: hidden;
   }
 }
+@media (max-width: 1280px) {
+  body {
+    overflow-x: hidden;
+  }
+}
 .animate-right {
   animation: anime-right .5s;
 }

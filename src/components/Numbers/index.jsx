@@ -57,7 +57,7 @@ const StyledSectionCounter = styled.div`
             flex: 1;
             div { 
                 h2 {
-                    font-weight: 900;
+                    font-weight: 700;
                     font-size: 45px;
                     line-height: 1.1;
                     color: var(--primaryColor);

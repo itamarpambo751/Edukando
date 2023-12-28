@@ -85,19 +85,34 @@ const StyledBanner = styled.div`
         width: 100%;
         height: 100%;
         .container {
-
             display: flex;
             width: 85%;
             padding-top: 90px;
             margin: 0 auto;
+            @media (max-width: 1280px) {
+                width: 95%;
+            }
             .you {
                 width: 37%;
                 z-index: 888;
                 position: absolute;
                 top: 0;
+                @media (max-width: 1296px) {
+                    left: 650px;
+                }
+                @media (max-width: 1280px) {
+                    left: 600px;
+                    width: 450px;
+                }
             }
             .youBack {
                 position: absolute;
+                @media (max-width: 1296px) {
+                    left: 650px;
+                }
+                @media (max-width: 1280px) {
+                    left: 650px;
+                }
             }
             .registerarea__video {
                 display: flex;
@@ -121,6 +136,10 @@ const StyledBanner = styled.div`
                     font-size: 17px;
                     padding-right: 30px;
                     color: #919191;
+                    @media (max-width: 1296px) {
+                        font-size: 14px;
+                        width: 500px;
+                    }
                 }
             }
         }
