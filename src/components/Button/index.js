@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Button = styled.button(({ color, bg, countBg, border, countColor }) => `
-    padding: 5px 10px;
-    border-radius: .3rem;
+    padding: 12px 25px;
+    border-radius: 45rem;
     position: relative;
     display: flex;
     color: ${color ? color:'black' };
@@ -10,8 +10,7 @@ export const Button = styled.button(({ color, bg, countBg, border, countColor })
     align-items: center;
     background: ${bg ? bg:'var(--primaryColor)'};
     border: ${border ? '1px solid var(--bodyColor)':'none'};
-    height: 45px;
-    gap: .3rem;
+    gap: 1rem;
     transition: all 0s;
     cursor: pointer;
     .count {
