@@ -5,7 +5,8 @@ import grid_1 from "../../assets/images/grid/grid_1.png"
 import grid_2 from "../../assets/images/grid/grid_2.png"
 import grid_small from "../../assets/images/grid/grid_small_5.jpg"
 
-import { BsBookHalf, BsClock, BsHeartFill, BsStarFill } from "react-icons/bs"
+import { BsBookHalf, BsClock, BsHeartFill, BsList, BsStarFill, BsXCircle } from "react-icons/bs"
+import { useState } from "react"
 
 function CourseCard() {
     return (
@@ -71,8 +72,23 @@ function CourseCard() {
         </div>
     )
 }
-
+const tags = [
+    {tag: 'Tecnologia', dataFilter: '.tech'},
+    {tag: 'Arquitetura', dataFilter: '.arch'},
+    {tag: 'Design', dataFilter: '.design'},
+    {tag: 'Comércio', dataFilter: '.merch'},
+]
 export default function Courses() {
+    const [tag, setTag] = useState({ tag: 'Todos', dataFilter: '*' })
+    const [filterDataOpen, setFilterDataOpen] = useState(false)
+    const courses = [1, 2, 3, 4, 5, 6, 7, 8]
+    const changeGroup = (e) => {
+        setTag({
+            tag: e.target.innerHTML,
+            dataFilter: e.target.getAttribute('data-filter')
+        })
+        setFilterDataOpen(false)
+    }
     return (
         <StyledCoursesSection>
             <div className="container">
@@ -83,22 +99,26 @@ export default function Courses() {
                     <div className="courses_sec_top">
                         <h2>Os Cursos perfeitos para sua carreira</h2>
                         <div className="inter_navigation">
-                            <button data-filter="*" className="active">Todos</button>
-                            <button data-filter=".tech">Tecnologia</button>
-                            <button data-filter=".arch">Arquitetura</button>
-                            <button data-filter=".design">Design</button>
-                            <button data-filter=".merch">Comércio</button>
+                            <button className="filter-button-list" onClick={() => setFilterDataOpen(currentState => !currentState)}>
+                                {filterDataOpen ? <BsXCircle/>:<BsList />}
+                                Filtrar {tag.tag}
+                            </button>
+                            {filterDataOpen && (
+                                <ul className="mobile-mode anime-top">
+                                    <button onClick={changeGroup} data-filter="*" className="active">Todos</button>
+                                    {tags.map(({ tag, dataFilter }) => (
+                                        <button onClick={changeGroup} data-filter={dataFilter}>{tag}</button>
+                                    ))}
+                                </ul>
+                            )}
+                            <button onClick={changeGroup} data-filter="*" className="active">Todos</button>
+                            {tags.map(({ tag, dataFilter }) => (
+                                <button onClick={changeGroup} data-filter={dataFilter}>{tag}</button>
+                            ))}
                         </div>
                     </div>
                     <div class="row grid">
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
-                        <CourseCard />
+                        {courses.map(() => <CourseCard/>)}
                     </div>
                 </div>
             </div>
@@ -119,6 +139,59 @@ const StyledCoursesSection = styled.div`
     }
     @media (max-width: 500px) and (min-width: 390px){
         margin-top: 1050px;
+        .inter_navigation {
+            position: relative;
+        }
+        .inter_navigation button {
+            &:not(:first-child, .mobile-mode button) {
+                display: none;
+            }
+            &:first-child{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .5rem;
+                border-radius: .3rem;
+                padding: 2px 15px;
+                background-color: var(--primaryColor);
+                color: white;
+            }
+        }
+        .inter_navigation .mobile-mode {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            padding: 10px;
+            border-radius: 0 .5rem .5rem .5rem;
+            top: 70px;
+            left: 20px;
+            z-index: 1;
+            background-color: var(--whiteColor);
+            box-shadow: 0 0 20px 10px rgba(96, 45, 237, 0.3);
+            transition: .3s;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 30px;
+                top: -30px;
+                left: 0;
+                border-radius: 0 0 0 6em;
+                box-shadow: 0px 15px 0 0 var(--whiteColor);
+                z-index: 0;
+            }
+        }
+        .inter_navigation .mobile-mode button {
+            background-color: transparent;
+            border: 1px solid var();
+            display: flex;
+            padding: 5px 10px;
+            border-radius: 5%;
+            justify-content: flex-start;
+            &:hover {
+                background-color: var(--darkdeep3);
+            }
+        }
     }
     @media (max-width: 391px) and (min-width: 375px) {
         margin-top: 1100px;
@@ -184,6 +257,9 @@ const StyledCoursesSection = styled.div`
                 padding: .2rem .3rem;
             }
         }
+    }
+    .filter-button-list {
+        display: none;
     }
     .row.grid {
         width: 100%;

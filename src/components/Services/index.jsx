@@ -15,7 +15,7 @@ export default function ServicesSection() {
                 <div className="container">
                     <div className="left_side">
                         <div className="left_side_">
-                            <h2>Conheça os nossos serviços para ti</h2>
+                            <h2>Conheça os nossos serviços</h2>
                             <form>
                                 <input type="search" placeholder="Procure por um serviço..."/>
                                 <button>

@@ -95,7 +95,7 @@
   font-size: 16px;
   outline: none;
   font-family: "Poppins", sans-serif;
-  transition: .1s ease-in-out;
+  transition: color .5ms ease-in-out;
 }
 body {
   background: var(--bodyBg);
@@ -130,6 +130,10 @@ del::before {
 .anime-close-right {
   animation: anime-right-invertion .5s;
 }
+.anime-top {
+  position: absolute;
+  animation: anime-top .3s ease-in-out;
+}
 @keyframes anime-right-invertion {
   0% {
     right: 0;
@@ -142,6 +146,15 @@ del::before {
     right: -330px;
   } 100% {
     right: 0;
+  }
+}
+@keyframes anime-top {
+  0% {
+    top: 50px;
+    opacity: 0;
+  } 100% {
+    top: 70px;
+    opacity: 1;
   }
 }
 @keyframes bounce {
