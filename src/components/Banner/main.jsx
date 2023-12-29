@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import bannerImage from "../../assets/images/register/register__bg.png"
 import videoIcon from "../../assets/images/icon/video.png"
 import FloatintIcons from "../FloatingIcons";
 
@@ -9,7 +8,6 @@ import img3 from "../../assets/images/register/register__3.png"
 import you from "../../assets/images/about/education__13.png"
 import youBack from "../../assets/images/about/about_8.png"
 import TitleSpan from "../TitleSpan";
-import { Button } from "../Button";
 import { BsArrowRight } from "react-icons/bs";
 
 export function BannerTop() {
@@ -17,11 +15,11 @@ export function BannerTop() {
         <StyledBanner>
             <div id="banner_shadow">
                 <div className="container">
-                    <div>
+                    <div className="container-left">
                         <FloatingIconsTopCollection>
-                            <img class="register__1" src={img1} alt="register"/>
-                            <img class="register__2" src={img2} alt="register"/>
-                            <img class="register__3" src={img3} alt="register"/>
+                            <img className="register__1" src={img1} alt="register"/>
+                            <img className="register__2" src={img2} alt="register"/>
+                            <img className="register__3" src={img3} alt="register"/>
                         </FloatingIconsTopCollection>
                         <TitleSpan>Edukando</TitleSpan>
                         <h1>Transforme as suas
@@ -31,8 +29,8 @@ export function BannerTop() {
                         </h1>
                         <div className="registerarea__video">
                             <div>
-                                <div class="video__pop__btn">
-                                    <a class="video-btn" href="https://www.youtube.com/watch?v=vHdclsdkp28">
+                                <div className="video__pop__btn">
+                                    <a className="video-btn" href="https://www.youtube.com/watch?v=vHdclsdkp28">
                                         <img src={videoIcon} alt="" />
                                     </a>
                                 </div>
@@ -53,7 +51,7 @@ export function BannerTop() {
                             </button>
                         </ButtonsGroup>
                     </div>
-                    <div>
+                    <div className="container-right">
                         <img src={you} alt="" className="you"/>
                         <img src={youBack} alt="" className="youBack"/>
                     </div>
@@ -92,6 +90,9 @@ const StyledBanner = styled.div`
             @media (max-width: 1280px) {
                 width: 95%;
             }
+            .container-left {
+                z-index: 5;
+            }
             .you {
                 width: 37%;
                 z-index: 888;
@@ -112,6 +113,26 @@ const StyledBanner = styled.div`
                 }
                 @media (max-width: 1280px) {
                     left: 650px;
+                }
+                @media (max-width: 1104px) {
+                    left: 500px;
+                    z-index: 1;
+                }
+            }
+            @media (max-width: 1074px) {
+                .you {
+                    left: 550px;
+                }
+                .youBack {
+                    left: 500px;
+                }
+            }
+            @media (max-width: 1050px) {
+                .you {
+                    display: none;
+                }
+                .youBack {
+                    display: none;
                 }
             }
             .registerarea__video {
@@ -140,21 +161,60 @@ const StyledBanner = styled.div`
                         font-size: 14px;
                         width: 500px;
                     }
+                    @media (max-width: 1074px) {
+                        width: 410px;
+                    }
                 }
             }
         }
     }
-    @media (max-width: 700px) {
+    @media (max-width: 1050px) {
+        width: 90%;
         h1 {
             width: 100%;
-            line-height: 40px;
-            font-size: 40px;
+            text-align: center;
             .breaker {
                 display: none;
             }
         }
         #banner_shadow {
             .container {
+                width: 95%;
+                .registerarea__video {
+                    width: 100%;
+                    margin-top: 20px;
+                    .video__pop__btn {
+                        width: 60px;
+                        min-height: 60px;
+                        max-height: 60px;
+                        border-radius: calc(60px/2);
+                    }
+                    p {
+                        font-size: 15px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 700px) {
+        width: 90%;
+        h1 {
+            width: 100%;
+            line-height: 40px;
+            font-size: 40px;
+            text-align: center;
+            .breaker {
+                display: none;
+            }
+        }
+        #banner_shadow {
+            .container {
+                .container-left {
+                    button {
+                        padding: 5px 15px;
+                    }
+                }
                 width: 95%;
                 .registerarea__video {
                     width: 100%;
@@ -282,5 +342,8 @@ button {
         background-color: var(--primaryColor);
         color: white;
     }
+}
+@media (max-width: 1050px) {
+    justify-content: center;
 }
 `

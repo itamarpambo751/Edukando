@@ -244,8 +244,11 @@ const StyledAboutSection = styled.div`
   @media (max-width: 738px) {
     width: 90%;
   }
+  @media (max-width: 700px) {
+    margin-top: -140px;
+  }
   @media (max-width: 635px) {
-    margin-top: -190px;
+    margin-top: -140px;
     #about_imgs {
       display: flex;
       justify-content: center;

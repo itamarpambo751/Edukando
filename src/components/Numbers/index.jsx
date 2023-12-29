@@ -60,7 +60,7 @@ const StyledSectionCounter = styled.div`
                     font-weight: 700;
                     font-size: 45px;
                     line-height: 1.1;
-                    color: var(--primaryColor);
+                    color: var(--blackColor);
                 }
                 span {
                     font-weight: 500;
