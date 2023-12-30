@@ -324,7 +324,7 @@ const StyledServiceSection = styled.div`
                     }
                 }
             }
-            @media (max-width: 910px) {
+            @media (max-width: 980px) {
                 display: flex;
                 flex-direction: column;
                 .left_side {

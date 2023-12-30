@@ -69,14 +69,17 @@ const StyledCoursesSection = styled.div`
     margin-top: 220px;
     padding-top: 120px;
     padding-bottom: 100px;
-    @media (max-width: 909px) and (min-width: 539px) {
-        margin-top: 520px;
+    @media (max-width: 980px) {
+        margin-top: 550px;
     }
-    @media (max-width: 538px) and (min-width: 501px) {
-        margin-top: 1010px;
+    @media (max-width: 920px) {
+        margin-top: 570px;
     }
-    @media (max-width: 500px) and (min-width: 390px){
-        margin-top: 1050px;
+    @media (max-width: 649px) {
+        margin-top: 740px;
+    }
+    @media (max-width: 589px){
+        margin-top: 800px;
         .inter_navigation {
             position: relative;
         }
@@ -131,8 +134,14 @@ const StyledCoursesSection = styled.div`
             }
         }
     }
+    @media (max-width: 538px) {
+        margin-top: 1360px;
+    }
+    @media (max-width: 507px) {
+        margin-top: 1400px;
+    }
     @media (max-width: 391px) and (min-width: 375px) {
-        margin-top: 1100px;
+        margin-top: 1500px;
     } 
     @media (max-width: 376px) and (min-width: 360px) {
         margin-top: 1150px;
