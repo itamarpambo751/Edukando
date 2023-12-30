@@ -45,9 +45,7 @@ export function BannerTop() {
                             </button>
                             <button>
                                 Explorar
-                                <i>
-                                    <BsArrowRight/>
-                                </i>
+                                <BsArrowRight/>
                             </button>
                         </ButtonsGroup>
                     </div>
@@ -278,7 +276,7 @@ const TextDecoration = styled.small`
 const FloatingIconsTopCollection = styled.div`
     position: absolute;
     top: 100px;
-    left: 100px;
+    left: 250px;
     .register__1 {
         position: absolute;
         margin-left: 20px;
@@ -333,14 +331,41 @@ button {
     align-items: center;
     gap: 1rem;
     border-radius: 40px;
+    transition: .2s ease-in-out;
+    border: 2px solid transparent;
     &:first-child {
-        border: 2px solid #F2277E;
+        position: relative;
+        border-color:#F2277E;
         color: #F2277E;
         background-color: transparent;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            border-radius: 40px;
+            background-color: #F2277E;
+            transition: .7s ease-in-out;
+            z-index: -1;
+        }
+        &:hover {
+            color: white;
+            &::before {
+                width: 100%;
+            }
+        }
     }
     &:last-child {
         background-color: var(--primaryColor);
         color: white;
+        &:hover {
+            background-color: transparent;
+            color: var(--primaryColor);
+            border-color: var(--primaryColor);
+        }
     }
 }
 @media (max-width: 1050px) {
