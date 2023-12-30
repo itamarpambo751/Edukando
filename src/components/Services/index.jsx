@@ -4,27 +4,35 @@ import { BsArrowRight } from "react-icons/bs"
 
 import botImage from "../../assets/images/herobanner/herobanner__slider__8.png"
 import bcgService from "../../assets/images/service/service__shape__bg__1.png" 
+import HeightBefore from "../HeightBefore"
 
 export default function ServicesSection() {
     return(
         <StyledServiceSection>
-            <div className="container">
-                <TitleSpan>Nossos serviços</TitleSpan>
-            </div>
+            
             <div className="light-grey10">
-                <div className="container">
+                <div className="container" style={{display: 'block'}}>
+                    <br /><br />
+                    <TitleSpan>Nossos serviços</TitleSpan>
+                </div>
+                <div className="container" style={{position: 'relative'}}>
                     <div className="left_side">
                         <div className="left_side_">
                             <h2>Conheça os nossos serviços</h2>
-                            <form>
-                                <input type="search" placeholder="Procure por um serviço..."/>
-                                <button>
-                                    Explorar
-                                    <BsArrowRight />
-                                </button>
-                            </form>
+                            <p>
+                                Construction is a general term meaning the art and science to form systems organizations, and comes from Latin Construction is
+                            </p>
+                            <br />
+                            <p>
+                                <HeightBefore>
+                                    Construction is a general term meaning the art and science to form systems organizations, and comes from Latin Construction is a organizations, and comes from Latin construction and Old
+                                </HeightBefore>
+                            </p>
                         </div>
-                        <img src={botImage} alt="bot" />
+                        <Explore>
+                            Explorar
+                            <BsArrowRight />
+                        </Explore>
                     </div>
                     <div className="right_side">
                         <img src={bcgService} className="bcg-service" />
@@ -391,4 +399,15 @@ const StyledServiceSection = styled.div`
             }
         }
     }
+`
+const Explore = styled.button`
+    margin-top: 200px;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    border-radius: 40px;
+    color: white;
+    background-color: var(--secondaryColor);
 `

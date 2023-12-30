@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Banner, Courses, Header, OurNumbers, ServicesSection, Subscribe, Team, ToggleThemeButton } from './components'
+import { Banner, Courses, Header, OurNumbers, ServicesSection, Subscribe, Team, TitleSpan, ToggleThemeButton } from './components'
 import { BsCheck } from 'react-icons/bs'
 
 import about_2 from "./assets/images/about/about_2.png"
@@ -28,6 +28,8 @@ function App() {
           </div>
         </div>
         <div className='about_right_side'>
+          <br />
+          <TitleSpan>Sobre nós</TitleSpan>
           <h1>O seu Mundo da motivação e conquista.</h1>
           <span className='about_sub_title'>Em Angola, vocacionanda à inspiração e impacto social...</span>
           <ul>
@@ -94,6 +96,7 @@ const StyledAboutSection = styled.div`
       line-height: 50px;
       font-weight: 600;
       margin-bottom: 30px;
+      margin-top: 20px;
       color: var(--blackColor2);
       @media (max-width: 1290px) {
         font-size: 40px;

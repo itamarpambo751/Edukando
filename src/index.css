@@ -103,6 +103,9 @@ body {
 button {
   cursor: pointer;
 }
+p {
+  color: var(--contentColor);
+}
 del {
   position: relative;
 }
