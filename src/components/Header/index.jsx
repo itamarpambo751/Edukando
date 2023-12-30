@@ -15,7 +15,7 @@ export function Header() {
 
                 </HeaderTopStyled>
                 <div className="container">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="logo" width={200}/>
                     <div className="header-right-side">
                         <nav>
                             <ul>
