@@ -19,11 +19,11 @@ export default function ServicesSection() {
                     <div className="left_side">
                         <div className="left_side_">
                             <h2>Conheça os nossos serviços</h2>
-                            <p>
+                            <p className="first-paragraph">
                                 Construction is a general term meaning the art and science to form systems organizations, and comes from Latin Construction is
                             </p>
                             <br />
-                            <p>
+                            <p className="second-paragraph">
                                 <HeightBefore>
                                     Construction is a general term meaning the art and science to form systems organizations, and comes from Latin Construction is a organizations, and comes from Latin construction and Old
                                 </HeightBefore>
@@ -328,12 +328,15 @@ const StyledServiceSection = styled.div`
                 display: flex;
                 flex-direction: column;
                 .left_side {
-                    display: block;
+                    display: flex;
                     position: relative;
+                    border: 1px solid red;
+                    p.first-paragraph {
+                        display: none;
+                    }
                     .left_side_ {
-                        position: absolute;
-                        width: 50%;
-                        right: 0;
+                        position: relative;
+                        width: 100%;
                         h2 {
                             font-size: 40px;
                         }

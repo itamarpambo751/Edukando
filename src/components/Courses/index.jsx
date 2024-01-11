@@ -8,10 +8,10 @@ import { useState } from "react"
 import CourseBoxCard from "./courseBoxCard"
 
 const tags = [
-    {tag: 'Tecnologia', dataFilter: '.tech'},
-    {tag: 'Arquitetura', dataFilter: '.arch'},
-    {tag: 'Design', dataFilter: '.design'},
-    {tag: 'Comércio', dataFilter: '.merch'},
+    {tag: 'Tecnologia', dataFilter: 'tech'},
+    {tag: 'Arquitetura', dataFilter: 'arch'},
+    {tag: 'Design', dataFilter: 'design'},
+    {tag: 'Comércio', dataFilter: 'merch'},
 ]
 
 export default function Courses() {
@@ -19,6 +19,9 @@ export default function Courses() {
     const [filterDataOpen, setFilterDataOpen] = useState(false)
     const courses = [1, 2, 3, 4, 5, 6, 7, 8]
     const changeGroup = (e) => {
+        const actives = document.querySelectorAll('.inter_navigation button.active')
+        actives.forEach(button => button.classList.remove('active'))
+        e.target.classList.add('active')
         setTag({
             tag: e.target.innerHTML,
             dataFilter: e.target.getAttribute('data-filter')
@@ -36,8 +39,7 @@ export default function Courses() {
                         <h2>Os Cursos perfeitos para sua carreira</h2>
                         <div className="inter_navigation">
                             <button className="filter-button-list" onClick={() => setFilterDataOpen(currentState => !currentState)}>
-                                {filterDataOpen ? <BsXCircle/>:<BsList />}
-                                Filtrar {tag.tag}
+                                {filterDataOpen ? <BsXCircle/>:<BsList/>} {tag.tag}
                             </button>
                             {filterDataOpen && (
                                 <ul className="mobile-mode anime-top">
@@ -75,8 +77,11 @@ const StyledCoursesSection = styled.div`
     @media (max-width: 920px) {
         margin-top: 570px;
     }
-    @media (max-width: 649px) {
+    @media (max-width: 649px) and (min-width: 588px){
         margin-top: 740px;
+        .inter_navigation .mobile-mode {
+            display: none;
+        }
     }
     @media (max-width: 589px){
         margin-top: 800px;
@@ -140,10 +145,10 @@ const StyledCoursesSection = styled.div`
     @media (max-width: 507px) {
         margin-top: 1400px;
     }
-    @media (max-width: 391px) and (min-width: 375px) {
+    @media (max-width: 391px) {
         margin-top: 1500px;
     } 
-    @media (max-width: 376px) and (min-width: 360px) {
+    @media (max-width: 376px) {
         margin-top: 1150px;
     }
     .container {
@@ -267,7 +272,7 @@ const StyledCoursesSection = styled.div`
             line-height: 27px;
             background: rgba(0, 0, 0, 0.16);
             text-align: center;
-            color: var(--whiteColor);
+            color: #fff;
             border-radius: 3px;
             transition: var(--transition);
             display: flex;
@@ -351,7 +356,7 @@ const StyledCoursesSection = styled.div`
             left: 20px;
             z-index: 999;
             background: var(--secondaryColor);
-            color: var(--whiteColor);
+            color: #fff;
             border-radius: 3px;
             font-weight: 600;
             font-size: 12px;

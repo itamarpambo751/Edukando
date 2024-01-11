@@ -8,7 +8,7 @@ const Text = styled.span`
     background: var(--whiteColor);
     display: flex;
     border-left: 5px solid var(--primaryColor);
-    max-width: 400px;
+    max-width: 100%;
     align-items: center;
     justify-content: center;
     padding: 25px 10px;

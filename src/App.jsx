@@ -329,7 +329,7 @@ const StyledAboutSection = styled.div`
       #about_img_group {
         #main_img {
           margin-left: -85px;
-          width: ${screen.width - 8 + 'px'};
+          /*width: ${screen.width - 8 + 'px'};*/
         }
       }
     }
